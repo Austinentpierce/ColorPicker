@@ -61,7 +61,7 @@ export function App() {
           onChange={handleChangeLightness}
         ></input>
       </section>
-      <footer></footer>
+      <footer>Colors, like features follow the changes of the emotions</footer>
     </main>
   )
 }
