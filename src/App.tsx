@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export function App() {
   const [hue, setHue] = useState(100)
   const [saturation, setSaturation] = useState(75)
-  const [lightness, setlightness] = useState(25)
+  const [lightness, setLightness] = useState(25)
 
   function handleChangeHue(event: React.ChangeEvent<HTMLInputElement>) {
     setHue(Number(event?.target.value))
@@ -12,17 +12,21 @@ export function App() {
     setSaturation(Number(event.target.value))
   }
   function handleChangeLightness(event: React.ChangeEvent<HTMLInputElement>) {
-    setlightness(Number(event.target.value))
+    setLightness(Number(event.target.value))
   }
-  const newColor = `hsl(${hue},${saturation},${lightness})`
-  const newStyle = { Color: newColor }
+
+  const newColor = `hsl(${hue},${saturation}%,${lightness}%)`
+  const newStyle = { color: newColor }
+
   return (
     <main>
-      <h1>Color Picker</h1>
+      <header>Color Picker</header>
 
       <figure style={newStyle}>
-        <i className="Icon fab fa-10x fa-accusoft"></i>
+        <i className="fab fa-10x fa-accusoft"></i>
       </figure>
+
+      <section className="directions"></section>
       <section>
         <p>Hue</p>
         <span>{hue}</span>
@@ -40,8 +44,8 @@ export function App() {
         <input
           className="saturation"
           type="range"
-          min="0"
-          max="360"
+          min="0%"
+          max="100%"
           value={saturation}
           onChange={handleChangeSaturation}
         ></input>
@@ -51,12 +55,13 @@ export function App() {
         <input
           className="lightness"
           type="range"
-          min="0"
-          max="360"
+          min="0%"
+          max="100%"
           value={lightness}
           onChange={handleChangeLightness}
         ></input>
       </section>
+      <footer></footer>
     </main>
   )
 }
