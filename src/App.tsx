@@ -9,10 +9,12 @@ export function App() {
         <i className="Icon fab fa-10x fa-accusoft"></i>
       </figure>
       <section>
-        <h2>Hue</h2>
+        <p>Hue</p>
         <input className="hue" type="range" min="0" max="360"></input>
-        <h3>Saturation</h3>
+        <p>Saturation</p>
         <input className="saturation" type="range" min="0" max="360"></input>
+        <p>Lightness</p>
+        <input className="lightness" type="range" min="0" max="360"></input>
       </section>
     </main>
   )
