@@ -15,12 +15,18 @@ export function App() {
     setLightness(Number(event.target.value))
   }
 
+  function handleRandomButtonClick() {
+    setHue(Math.floor(Math.random() * 361))
+    setSaturation(Math.floor(Math.random() * 101))
+    setLightness(Math.floor(Math.random() * 101))
+  }
+
   const newColor = `hsl(${hue},${saturation}%,${lightness}%)`
   const newStyle = { color: newColor }
 
   return (
     <main>
-      <header>
+      <header style={newStyle}>
         <div className="the">The</div>
         <div className="changing">Changing</div>
         <div className="color">Color</div>
@@ -33,7 +39,7 @@ export function App() {
         <i className="fas fa-10x fa-barcode"></i>
       </figure>
 
-      <div className="directions">
+      <div className="directions" style={newStyle}>
         These sliders allow you to choose different characteristics of colors
         slide them around and see how you what you come up with!
       </div>
@@ -72,9 +78,11 @@ export function App() {
         ></input>
       </section>
 
-      <button className="Randomizer">Randomizer</button>
+      <button onClick={handleRandomButtonClick}>Randomizer</button>
 
-      <footer>Colors, like features follow the changes of the emotions</footer>
+      <footer style={newStyle}>
+        Colors, like features follow the changes of the emotions
+      </footer>
     </main>
   )
 }
