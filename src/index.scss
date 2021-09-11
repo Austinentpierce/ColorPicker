@@ -1,4 +1,6 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&display=swap');
 
 :root {
   font: 16px / 1 sans-serif;
@@ -7,6 +9,65 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
+  margin: 1rem;
   min-height: 100%;
+  border: solid black 0.35rem;
+  background-color: black;
+}
+
+header {
+  font-size: 4.5rem;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+header .the {
+  color: rgb(153, 255, 0);
+}
+header .changing {
+  color: rgb(255, 0, 255);
+}
+header .color {
+  color: rgb(0, 247, 255);
+}
+header .picker {
+  color: rgb(255, 208, 0);
+}
+main {
+  margin: 1rem;
+}
+.directions {
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: 'Cinzel', serif;
+  color: rgb(0, 255, 234);
+}
+figure {
+  text-align: center;
+}
+section {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  color: yellow;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.Randomizer {
+  font-size: large;
+  margin-top: 5rem;
+  color: rgb(0, 26, 255);
+  justify-content: center;
+}
+p {
+  color: rgb(0, 255, 0);
+}
+
+footer {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 6rem;
+  font-family: 'Caveat', cursive;
+  color: rgb(255, 0, 0);
 }

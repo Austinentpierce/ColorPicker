@@ -20,13 +20,23 @@ export function App() {
 
   return (
     <main>
-      <header>Color Picker</header>
+      <header>
+        <div className="the">The</div>
+        <div className="changing">Changing</div>
+        <div className="color">Color</div>
+        <div className="picker">Picker</div>
+      </header>
 
       <figure style={newStyle}>
-        <i className="fab fa-10x fa-accusoft"></i>
+        <i className="fas fa-10x fa-barcode"></i>
+        <i className="fas fa-10x fa-barcode"></i>
+        <i className="fas fa-10x fa-barcode"></i>
       </figure>
 
-      <section className="directions"></section>
+      <div className="directions">
+        These sliders allow you to choose different characteristics of colors
+        slide them around and see how you what you come up with!
+      </div>
       <section>
         <p>Hue</p>
         <span>{hue}</span>
@@ -61,6 +71,9 @@ export function App() {
           onChange={handleChangeLightness}
         ></input>
       </section>
+
+      <button className="Randomizer">Randomizer</button>
+
       <footer>Colors, like features follow the changes of the emotions</footer>
     </main>
   )
